@@ -71,6 +71,17 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+a::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+a, select, textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
 
 /* Row */
 
@@ -1324,7 +1335,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-	body, input, textarea, select {
+	body, input, a, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
 		color: #777777;
@@ -1334,7 +1345,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 1680px) {
 
-			body, input, textarea, select {
+			body, input, a, textarea, select {
 				font-size: 15pt;
 			}
 
@@ -1342,7 +1353,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 1280px) {
 
-			body, input, textarea, select {
+			body, input, a, textarea, select {
 				font-size: 14pt;
 			}
 
@@ -1350,7 +1361,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			body, input, textarea, select {
+			body, input, a,textarea, select {
 				font-size: 12pt;
 			}
 
@@ -1358,7 +1369,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 360px) {
 
-			body, input, textarea, select {
+			body, input, a, textarea, select {
 				font-size: 11pt;
 			}
 
@@ -1586,6 +1597,7 @@ input, select, textarea {
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
+	a[type="btn"],
 	button,
 	.button {
 		-moz-transition: background-color .25s ease-in-out;
